@@ -1,5 +1,4 @@
-import React from 'react'
-import { GoGraph } from "react-icons/go";
+
 import { BsGraphUpArrow, BsGraphDownArrow } from "react-icons/bs";
 import Breadcrumb from '../../components/Breadcrumb';
 import BarChart from '../../components/BarChart';

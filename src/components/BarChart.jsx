@@ -19,7 +19,7 @@ const BarChart = () => {
         ]
     });
     return (
-        <div className="h-[650px] w-full shadow-lg mt-5 p-5 overflow-auto relative">
+        <div className="w-full shadow-lg mt-5 p-5 relative">
             <h2 className="text-2xl">Milk Production</h2>
             <Bar 
                 data={chartData}

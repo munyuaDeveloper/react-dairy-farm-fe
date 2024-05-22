@@ -12,14 +12,13 @@ const DashboardLaylout = () => {
     console.log(toggled);
   }
   return (
-    <div className="h-screen flex">
+    <div className="h-screen flex ">
       <SidebarComponent toggled={toggled} />
-      <div className="grow">
-        <Navbar toggleSidebar={handleToggle} />
+      <div className="grow h-[100%] overflow-y-auto">
+        <Navbar toggleSidebar={handleToggle}/>
         <div className="py-10 px-8">
            <Outlet/>
         </div>
-       
       </div>
 
     </div>

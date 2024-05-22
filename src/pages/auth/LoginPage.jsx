@@ -1,16 +1,15 @@
 import { useAuth } from "../../hooks/useAuth";
-import { useState } from "react"
-import { LoginService } from '../../services/AuthService'
+import { useState } from "react";
+import { LoginService } from "../../services/AuthService";
 
 const LoginPage = () => {
   const divStyle = {
-    background: 'linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593)'
+    background: "linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593)",
   };
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const { login }  = useAuth();
-
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const { login } = useAuth();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -18,8 +17,8 @@ const LoginPage = () => {
     // For the sake of this example, we're using a mock authentication
     if (email && password) {
       // Replace with actual authentication logic
-      const data  = await LoginService(email, password)
-      login(data)
+      const data = await LoginService(email, password);
+      login(data);
     } else {
       alert("Invalid email or password");
     }
@@ -28,21 +27,19 @@ const LoginPage = () => {
   return (
     <section className="gradient-form h-screen bg-neutral-200 dark:bg-sky-200">
       <div className="container h-full p-10 mx-auto">
-        <div
-          className="flex h-full flex-wrap items-center justify-center text-neutral-800 dark:text-neutral-200">
+        <div className="flex h-full flex-wrap items-center justify-center text-neutral-800 dark:text-neutral-200">
           <div className="w-full md:w-6/12 mx-auto">
-            <div
-              className="block rounded-lg bg-white shadow-lg dark:bg-sky-900">
+            <div className="block rounded-lg bg-white shadow-lg dark:bg-sky-900">
               <div className="px-4 md:px-0 ">
                 <div className="md:mx-6 md:p-12">
-
                   <div className="text-center">
                     <img
                       className="mx-auto w-48"
                       src="https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
-                      alt="logo" />
+                      alt="logo"
+                    />
                     <h4 className="mb-12 mt-1 pb-1 text-xl font-semibold">
-                      Welcome to Munyua's Dairy Farm
+                      Welcome to Munyua&apos;s Dairy Farm
                     </h4>
                   </div>
 
@@ -56,12 +53,13 @@ const LoginPage = () => {
                         id="exampleFormControlInput1"
                         placeholder="Email"
                         value={email}
-                        onChange={e => setEmail(e.target.value) }
+                        onChange={(e) => setEmail(e.target.value)}
                       />
                       <label
                         htmlFor="exampleFormControlInput1"
                         className="z-40 pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-400 dark:peer-focus:text-primary"
-                      >Email
+                      >
+                        Email
                       </label>
                     </div>
 
@@ -72,12 +70,13 @@ const LoginPage = () => {
                         id="exampleFormControlInput11"
                         placeholder="Password"
                         value={password}
-                        onChange={e => setPassword(e.target.value)}
+                        onChange={(e) => setPassword(e.target.value)}
                       />
                       <label
                         htmlFor="exampleFormControlInput11"
                         className="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-400 dark:peer-focus:text-primary"
-                      >Password
+                      >
+                        Password
                       </label>
                     </div>
 
